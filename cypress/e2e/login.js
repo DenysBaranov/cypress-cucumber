@@ -35,6 +35,6 @@ Then('I see the Login button not active', () => {
     cy.get('.modal-footer>button.btn-primary').should('be.disabled');
 })
 
-Then('I see error message with text "Wrong email or password"', () => {
-    cy.get('.alert-danger').should('have.text', 'Wrong email or password');
+Then('I see error message with text {string}', (errorMessage) => {
+    cy.get('.alert-danger').should('have.text', errorMessage);
 })
